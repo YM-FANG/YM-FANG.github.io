@@ -310,27 +310,26 @@
       
         
           
-            <ul>
-<li>对称加密</li>
-</ul>
-<p>常见的对称加密算法有 DES\3DES\AES</p>
-<p>加密解密使用同一套密钥，加密强度高。安全性不高</p>
-<ul>
-<li>非对称加密</li>
-</ul>
-<p>常见的非对称加密算法有 rsa\dsa\ecc</p>
-<p>cli ——-request———&gt; ser</p>
-<p>cli &lt;——–pub_key——– ser</p>
-<p>cli —–利用公钥加密数据—–&gt; ser</p>
-<p>cli &lt;——–验证通过——— ser  利用私钥解密数据</p>
-<p>缺点  比对称加密慢很多，公钥容易被伪造，解决方法ca证书</p>
-<p>ssh (secure shell)</p>
-<p>SSH提供两种登录方式验证：</p>
-<p>.密码验证：cli向ser发起一个login请求，ser将自己的公钥发送给cli，cli利用公钥加密密码发送给ser,ser利用私钥解密，获得密码<br>.密钥验证：cli生成自己的公钥和私钥，然后将公钥放在ser，cli发起请求，ser使用cli的公钥加密的一个质询发送给cli，cli利用私钥解密然后再利用自己的公钥加密发送给ser,ser接收后对比相同就通过认证。</p>
-<p>ssh的不安全，公钥没有CA公证，容易出现ser端被冒充<br>解决方法：公钥指纹（md5对公钥进行加密，生成128位指纹），ser端在自己的网站上首先贴出公钥指纹，便于cli进行核对</p>
-<p>参考：<a href="https://segmentfault.com/a/1190000004461428" target="_blank" rel="noopener">https://segmentfault.com/a/1190000004461428</a></p>
-
           
+对称加密
+
+常见的对称加密算法有 DES\3DES\AES
+加密解密使用同一套密钥，加密强度高。安全性不高
+
+非对称加密
+
+常见的非对称加密算法有 rsa\dsa\ecc
+cli ——-request———&gt; ser
+cli &lt;——–pub_key——– ser
+cli —–利用公钥加
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/27/ssh/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -458,9 +457,16 @@
       
         
           
-            <p>迷茫到要死</p>
+          迷茫到要死
 
           
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/27/mimang/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -588,17 +594,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/09/27/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
