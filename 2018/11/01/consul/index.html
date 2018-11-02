@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心">
+<meta name="description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心   可以使用配置文件，位于/etc/consul.d/ 目录下的json">
 <meta property="og:type" content="article">
 <meta property="og:title" content="consul">
 <meta property="og:url" content="http://yoursite.com/2018/11/01/consul/index.html">
 <meta property="og:site_name" content="fantastic">
-<meta property="og:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心">
+<meta property="og:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心   可以使用配置文件，位于/etc/consul.d/ 目录下的json">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-01T11:41:48.518Z">
+<meta property="og:updated_time" content="2018-11-02T05:06:38.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="consul">
-<meta name="twitter:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心">
+<meta name="twitter:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心   可以使用配置文件，位于/etc/consul.d/ 目录下的json">
 
 
 
@@ -317,6 +317,24 @@
 <li>健康检查 注册任意数量的服务及检查方法</li>
 <li>key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等</li>
 <li>多数据中心 </li>
+</ul>
+<p>可以使用配置文件，位于/etc/consul.d/ 目录下的json文件，注册服务或者使用curl -header “X-Consul-Token:xxx”  </p>
+<p>###etcd      是什么</p>
+<ul>
+<li>高可用键值存储，用来共享配置和服务发现，分布式键值存储</li>
+<li><p>提供存储以及获取数据的接口、监听机制、</p>
+<p>  etcdctl put /test/key val<br>  设置key=”message”,value=”value”<br>  curl <a href="http://127.0.0.1:2379/v2/keys/message" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/message</a> -XPUT -d value=”value”</p>
+<p>  etcdctl get /test/key<br>  获取message的值<br>  curl <a href="http://127.0.0.1:2379/v2/keys/message" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/message</a> </p>
+<p>  更改message的值<br>  curl <a href="http://127.0.0.1:2379/v2/keys/message" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/message</a> -XPUT -d value=”value ww”</p>
+<p>  etcdctl del /test/key<br>  删除key=message的值<br>  curl <a href="http://127.0.0.1:2379/v2/keys/message" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/message</a> -XDELETE</p>
+<p>  使用ttl，为key设置生命周期<br>  curl <a href="http://127.0.0.1:2379/v2/keys/message" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/message</a> -XPUT -d value=”value” -d ttl=5</p>
+<p>  curl <a href="http://127.0.0.1:2379/v2/keys/message?wait=true" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/message?wait=true</a> 当message发生变化，才返回</p>
+<p>  创建一个目录<br>  curl <a href="http://127.0.0.1:2379/v2/keys/dir" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/dir</a> -XPUT -d dir=true</p>
+<p>  列举一个目录<br>  curl <a href="http://127.0.0.1:2379/v2/keys/dir" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/dir</a></p>
+<p>  递归列举<br>  curl <a href="http://127.0.0.1:2379/v2/keys/dir?recursive=true" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/dir?recursive=true</a></p>
+<p>  删除目录<br>  curl <a href="http://127.0.0.1:2379/v2/keys/dir?dir=true" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/dir?dir=true</a> -XDELETE</p>
+<p>  在目录下面设置key=info<br>  curl <a href="http://127.0.0.1:2379/v2/keys/dir/info" target="_blank" rel="noopener">http://127.0.0.1:2379/v2/keys/dir/info</a> -XPUT -d value=fang -d ttl=20</p>
+</li>
 </ul>
 
       
