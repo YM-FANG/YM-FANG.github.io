@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心   可以使用配置文件，位于/etc/consul.d/ 目录下的json">
+<meta name="description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心    curl –header “X-Consul-Token:xxxx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="consul">
 <meta property="og:url" content="http://yoursite.com/2018/11/01/consul/index.html">
 <meta property="og:site_name" content="fantastic">
-<meta property="og:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心   可以使用配置文件，位于/etc/consul.d/ 目录下的json">
+<meta property="og:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心    curl –header “X-Consul-Token:xxxx">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-02T05:06:38.596Z">
+<meta property="og:updated_time" content="2018-11-02T07:44:05.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="consul">
-<meta name="twitter:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心   可以使用配置文件，位于/etc/consul.d/ 目录下的json">
+<meta name="twitter:description" content="consul -研究consul一直属于懵逼状态，今天问了旁边的同事，有了一点点眉目。 ###consul    是什么  服务发现 健康检查 注册任意数量的服务及检查方法 key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等 多数据中心    curl –header “X-Consul-Token:xxxx">
 
 
 
@@ -316,7 +316,9 @@
 <li>服务发现</li>
 <li>健康检查 注册任意数量的服务及检查方法</li>
 <li>key/value存储 应用程序可用根据自己的需要使用Consul的层级的key/value存储，比如动态配置，功能标记，协调，领袖选举等等</li>
-<li>多数据中心 </li>
+<li><p>多数据中心 </p>
+<p>  curl –header “X-Consul-Token:xxxxxx” -X PUT -d ‘test’ <a href="http://127.0.0.1:8500/v1/kv/web/key1" target="_blank" rel="noopener">http://127.0.0.1:8500/v1/kv/web/key1</a><br>  curl –header “X-Consul-Token:xxxxxx” -X DELETE <a href="http://127.0.0.1:8500/v1/kv/web/key1" target="_blank" rel="noopener">http://127.0.0.1:8500/v1/kv/web/key1</a><br>  curl –header “X-Consul-Token:xxxxxx” –request PUT  –data @test.json <a href="http://127.0.0.1:8500/v1/agent/service/register" target="_blank" rel="noopener">http://127.0.0.1:8500/v1/agent/service/register</a><br>  curl –header “X-Consul-Token:xxxxxx” <a href="http://127.0.0.1:9500/v1/kv/?recursive" target="_blank" rel="noopener">http://127.0.0.1:9500/v1/kv/?recursive</a></p>
+</li>
 </ul>
 <p>可以使用配置文件，位于/etc/consul.d/ 目录下的json文件，注册服务或者使用curl -header “X-Consul-Token:xxx”  </p>
 <p>###etcd      是什么</p>
