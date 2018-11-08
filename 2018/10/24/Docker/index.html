@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="fantastic">
 <meta property="og:description" content="what is Docker Docker和宿主机共享硬件资源和操作系统，实现资源的动态分配Docker  镜像：是一个特殊的文件系统，提供容器运行所需的程序，库，资源，配置文件等，还包括一些为运行时准备的配置参数（环境变量，用户，匿名卷等）。镜像不包括任何动态数据，内容构建之后不会被修改    容器：实质是进程，容器进程运行于属于自己的独立的命名空间，容器可以被创建，启动，停止，暂停，删除 仓库">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-24T11:07:06.905Z">
+<meta property="og:updated_time" content="2018-11-07T08:20:31.851Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker">
 <meta name="twitter:description" content="what is Docker Docker和宿主机共享硬件资源和操作系统，实现资源的动态分配Docker  镜像：是一个特殊的文件系统，提供容器运行所需的程序，库，资源，配置文件等，还包括一些为运行时准备的配置参数（环境变量，用户，匿名卷等）。镜像不包括任何动态数据，内容构建之后不会被修改    容器：实质是进程，容器进程运行于属于自己的独立的命名空间，容器可以被创建，启动，停止，暂停，删除 仓库">
@@ -318,15 +318,24 @@
 <li>Docker-compose 针对复杂服务器的部署，通过一个.yml配置文件，将所有容器的部署方法，文件映射，容器连接等配置写在里面    只需执行docker-compose up即可</li>
 <li>Docker-machine 用于在各种平台快速创建具有Docker服务的虚拟机的技术。基于linux内核的cgroup技术实现</li>
 <li>Dcoker-swarm   基于docker平台实现的集群技术</li>
-<li><p>Docker镜像的安装   ——》参照菜鸟教程<br>##镜像的获取</p>
+<li><p>Docker镜像的安装   ——》参照菜鸟教程</p>
+</li>
+<li><p>service docker start  开启docker<br>##镜像的获取</p>
 </li>
 <li><p>docker pull 镜像名</p>
 </li>
 <li>docker find 镜像名</li>
 <li>docker ps  查看当前运行的镜像</li>
+<li>docker images 查看已有镜像<br>交互运行容器</li>
+<li>docker run -i -t ubuntu:15.10 /bin/bash   -t 在新容器内指定一个伪终端或终端  -i  允许对容器内的stdin进行交互   exit退出容器<br>后台模式运行容器</li>
+<li>docker run -d 镜像:tag /bin/sh</li>
 <li>docker container stop  container-Id  终止一个镜像</li>
 <li>docker commit –author “” –message “”  NAMES IMAGE  </li>
 <li>docker run –name IMAGE  </li>
+<li>docker top NAMES  查看容器内部运行的进程</li>
+<li>docker inspect NAMES 查看docker底层信息</li>
+<li>docker stop NAMES  停止web应用容器</li>
+<li>docker start NAMES  重启web应用容器</li>
 </ul>
 
       
