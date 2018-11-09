@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="fantastic">
 <meta property="og:description" content="what is Docker Docker和宿主机共享硬件资源和操作系统，实现资源的动态分配Docker  镜像：是一个特殊的文件系统，提供容器运行所需的程序，库，资源，配置文件等，还包括一些为运行时准备的配置参数（环境变量，用户，匿名卷等）。镜像不包括任何动态数据，内容构建之后不会被修改    容器：实质是进程，容器进程运行于属于自己的独立的命名空间，容器可以被创建，启动，停止，暂停，删除 仓库">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-07T08:20:31.851Z">
+<meta property="og:updated_time" content="2018-11-08T03:09:28.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Docker">
 <meta name="twitter:description" content="what is Docker Docker和宿主机共享硬件资源和操作系统，实现资源的动态分配Docker  镜像：是一个特殊的文件系统，提供容器运行所需的程序，库，资源，配置文件等，还包括一些为运行时准备的配置参数（环境变量，用户，匿名卷等）。镜像不包括任何动态数据，内容构建之后不会被修改    容器：实质是进程，容器进程运行于属于自己的独立的命名空间，容器可以被创建，启动，停止，暂停，删除 仓库">
@@ -326,8 +326,9 @@
 </li>
 <li>docker find 镜像名</li>
 <li>docker ps  查看当前运行的镜像</li>
-<li>docker images 查看已有镜像<br>交互运行容器</li>
-<li>docker run -i -t ubuntu:15.10 /bin/bash   -t 在新容器内指定一个伪终端或终端  -i  允许对容器内的stdin进行交互   exit退出容器<br>后台模式运行容器</li>
+<li>docker images 查看已有镜像</li>
+<li>参数解释<br>  -P 允许将容器的端口随机映射到主机端口 -p 127.0.0.1:8080:80 将容器的端口映射到指定主机指定端口<br>  -t 在新容器内指定一个伪终端或终端  -i  允许对容器内的stdin进行交互  -d  后台运行<br>  -v $PWD/html:/etc/nginx/html  将<br>交互运行容器</li>
+<li>docker run -i -t ubuntu:15.10 /bin/bash      exit退出容器<br>后台模式运行容器</li>
 <li>docker run -d 镜像:tag /bin/sh</li>
 <li>docker container stop  container-Id  终止一个镜像</li>
 <li>docker commit –author “” –message “”  NAMES IMAGE  </li>
@@ -336,6 +337,9 @@
 <li>docker inspect NAMES 查看docker底层信息</li>
 <li>docker stop NAMES  停止web应用容器</li>
 <li>docker start NAMES  重启web应用容器</li>
+</ul>
+<ul>
+<li>docker 搭建nginx<br>  1.docker pull nginx<br>  2.docker run -p -d –name mynginx </li>
 </ul>
 
       
@@ -457,7 +461,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
