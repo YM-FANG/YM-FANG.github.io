@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="$whisper =new MongoDB\Client(Config::get(&amp;apos;mongodb.whisper_conn&amp;apos;));  连接数据库 $whisper = $whisper-&amp;gt;selectDatabase(config::get(&amp;quot;mongodb.whisper_name&amp;quot;));  选择库名 $collection = $whisper-">
+<meta name="description" content="server-reqrite阶段  server模块： rewrite阶段   location模块 set指令，ngx_rewrite模块中全部指令，rewrite指令content阶段access阶段">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mongodb操作">
-<meta property="og:url" content="http://yoursite.com/2018/12/04/2018-12-4/index.html">
+<meta property="og:title" content="nginx执行阶段">
+<meta property="og:url" content="http://yoursite.com/2019/01/03/nginx执行阶段/index.html">
 <meta property="og:site_name" content="fantastic">
-<meta property="og:description" content="$whisper =new MongoDB\Client(Config::get(&amp;apos;mongodb.whisper_conn&amp;apos;));  连接数据库 $whisper = $whisper-&amp;gt;selectDatabase(config::get(&amp;quot;mongodb.whisper_name&amp;quot;));  选择库名 $collection = $whisper-">
+<meta property="og:description" content="server-reqrite阶段  server模块： rewrite阶段   location模块 set指令，ngx_rewrite模块中全部指令，rewrite指令content阶段access阶段">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-04T07:28:25.930Z">
+<meta property="og:updated_time" content="2019-01-18T07:48:09.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mongodb操作">
-<meta name="twitter:description" content="$whisper =new MongoDB\Client(Config::get(&amp;apos;mongodb.whisper_conn&amp;apos;));  连接数据库 $whisper = $whisper-&amp;gt;selectDatabase(config::get(&amp;quot;mongodb.whisper_name&amp;quot;));  选择库名 $collection = $whisper-">
+<meta name="twitter:title" content="nginx执行阶段">
+<meta name="twitter:description" content="server-reqrite阶段  server模块： rewrite阶段   location模块 set指令，ngx_rewrite模块中全部指令，rewrite指令content阶段access阶段">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/04/2018-12-4/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/03/nginx执行阶段/">
 
 
 
 
 
-  <title>mongodb操作 | fantastic</title>
+  <title>nginx执行阶段 | fantastic</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/04/2018-12-4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/03/nginx执行阶段/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YM-FANG">
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">mongodb操作</h1>
+          <h1 class="post-title" itemprop="name headline">nginx执行阶段</h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-04T11:02:10+08:00">
-                2018-12-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-03T10:46:02+08:00">
+                2019-01-03
               </time>
             
 
@@ -280,8 +280,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/04/2018-12-4/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/12/04/2018-12-4/" itemprop="commentCount"></span>
+                <a href="/2019/01/03/nginx执行阶段/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/03/nginx执行阶段/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -309,24 +309,8 @@
       
 
       
-        <pre><code>$whisper =new MongoDB\Client(Config::get(&apos;mongodb.whisper_conn&apos;));  连接数据库
-$whisper = $whisper-&gt;selectDatabase(config::get(&quot;mongodb.whisper_name&quot;));  选择库名
-$collection = $whisper-&gt;selectCollection(&apos;message&apos;);   选择表名
-</code></pre><p>   #####<br>     find条件查询<br>    $collection-&gt;count(); &lt;==&gt;   mysql:: select count(<em>) from table<br>    $collection-&gt;find(); &lt;==&gt;  mysql::  select </em> from table<br>    $collection-&gt;findOne();  &lt;==&gt;  select * from table limit 1</p>
-<h5 id="select-rid-xid-from-table-where-id-xxxxxxxxx"><a href="#select-rid-xid-from-table-where-id-xxxxxxxxx" class="headerlink" title="select rid,xid from table where _id = xxxxxxxxx"></a>select rid,xid from table where _id = xxxxxxxxx</h5><pre><code>$id = new \MongoDB\BSON\ObjectId(&apos;5922babf421aa96b507ee41b&apos;);
-$fileter = [&apos;_id&apos;=&gt; $id ]  $options = [&apos;rid&apos;=&gt;1,&apos;xid&apos;=&gt;1];
-$collection-&gt;find($fileter,$options)
-</code></pre><h5 id="select-from-table-limit-10"><a href="#select-from-table-limit-10" class="headerlink" title="select * from table limit 10"></a>select * from table limit 10</h5><pre><code>$fileter = []  $options = [&apos;limit&apos;=&gt;10];
-$collection-&gt;find($fileter,$options)
-</code></pre><h5 id="select-from-table-limit-10-10-分页读"><a href="#select-from-table-limit-10-10-分页读" class="headerlink" title="select * from table limit 10,10  分页读"></a>select * from table limit 10,10  分页读</h5><pre><code>$fileter = []  $options = [&apos;skip&apos;=&gt;10,limit&apos;=&gt;10];
-$collection-&gt;find($fileter,$options)
-</code></pre><h5 id="select-from-table-limit-10-10-分页读-1"><a href="#select-from-table-limit-10-10-分页读-1" class="headerlink" title="select * from table limit 10,10  分页读"></a>select * from table limit 10,10  分页读</h5><pre><code>$fileter = []  $options = [&apos;skip&apos;=&gt;10,limit&apos;=&gt;10];
-$collection-&gt;find($fileter,$options)
-</code></pre><h5 id="betweeen-范围时间查询-select-from-table-where-tt-gt-start-amp-amp-tt-lt-end"><a href="#betweeen-范围时间查询-select-from-table-where-tt-gt-start-amp-amp-tt-lt-end" class="headerlink" title="betweeen 范围时间查询   select * from table where tt&gt;=$start &amp;&amp; tt&lt;$end"></a>betweeen 范围时间查询   select * from table where tt&gt;=$start &amp;&amp; tt&lt;$end</h5><pre><code>$start = new MongoDB\BSON\UTCDateTime(strtotime(&apos;2018-11-01 00:00:00&apos;)* 1000);
-$end = new MongoDB\BSON\UTCDateTime(time()* 1000);
-$fileter = [‘time’=&gt;[&apos;$gte&apos;=&gt;$start,&apos;$lt&apos;=&gt;$end]  $options = [&apos;skip&apos;=&gt;10,limit&apos;=&gt;10];
-$collection-&gt;find($fileter,$options)
-</code></pre><p><a href="https://www.cnblogs.com/tujia/p/8134002.html" target="_blank" rel="noopener">https://www.cnblogs.com/tujia/p/8134002.html</a></p>
+        <p>server-reqrite阶段  server模块：</p>
+<p>rewrite阶段   location模块 set指令，ngx_rewrite模块中全部指令，rewrite指令<br>content阶段<br>access阶段</p>
 
       
     </div>
@@ -351,8 +335,8 @@ $collection-&gt;find($fileter,$options)
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/03/systemd-supervisord/" rel="next" title="systemd/supervisord">
-                <i class="fa fa-chevron-left"></i> systemd/supervisord
+              <a href="/2018/12/25/proxy-cache-fastcgi-cache/" rel="next" title="[proxy_cache&fastcgi_cache  lua]">
+                <i class="fa fa-chevron-left"></i> [proxy_cache&fastcgi_cache  lua]
               </a>
             
           </div>
@@ -361,8 +345,8 @@ $collection-&gt;find($fileter,$options)
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/05/2018-12-5/" rel="prev" title="go  总结--">
-                go  总结-- <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/23/nginx配置文件/" rel="prev" title="nginx配置文件">
+                nginx配置文件 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -418,17 +402,8 @@ $collection-&gt;find($fileter,$options)
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -472,22 +447,6 @@ $collection-&gt;find($fileter,$options)
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#select-rid-xid-from-table-where-id-xxxxxxxxx"><span class="nav-number">1.</span> <span class="nav-text">select rid,xid from table where _id = xxxxxxxxx</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#select-from-table-limit-10"><span class="nav-number">2.</span> <span class="nav-text">select * from table limit 10</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#select-from-table-limit-10-10-分页读"><span class="nav-number">3.</span> <span class="nav-text">select * from table limit 10,10  分页读</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#select-from-table-limit-10-10-分页读-1"><span class="nav-number">4.</span> <span class="nav-text">select * from table limit 10,10  分页读</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#betweeen-范围时间查询-select-from-table-where-tt-gt-start-amp-amp-tt-lt-end"><span class="nav-number">5.</span> <span class="nav-text">betweeen 范围时间查询   select * from table where tt&gt;=$start &amp;&amp; tt&lt;$end</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

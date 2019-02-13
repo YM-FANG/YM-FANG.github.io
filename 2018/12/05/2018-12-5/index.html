@@ -6,10 +6,10 @@
 
 
 <html class="theme-next pisces use-motion" lang="zh-Hans">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
 
 
@@ -20,8 +20,8 @@
 
 
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -40,7 +40,7 @@
 
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
 
 
@@ -48,9 +48,9 @@
 
 
 
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
 
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="fantastic">
 <meta property="og:description" content="###kafkaBroker  集群包含了一个或者多个服务器Topic   每条发布到kafka几群的消息都有一个类别，这个类别称为TopicPartation  物理概念，每个topic包含一个或者多个PartationProducer   负责发布消息到kafka broker consumer 订阅模式 subscribe()  assign()         commit实现  comm">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-06T09:29:15.946Z">
+<meta property="og:updated_time" content="2019-01-23T07:47:54.093Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="go  总结--">
 <meta name="twitter:description" content="###kafkaBroker  集群包含了一个或者多个服务器Topic   每条发布到kafka几群的消息都有一个类别，这个类别称为TopicPartation  物理概念，每个topic包含一个或者多个PartationProducer   负责发布消息到kafka broker consumer 订阅模式 subscribe()  assign()         commit实现  comm">
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/05/2018-12-5/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/05/2018-12-5/">
 
 
 
@@ -137,7 +137,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -147,13 +147,13 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">fantastic</span>
         <span class="logo-line-after"><i></i></span>
@@ -183,7 +183,7 @@
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
             
             首页
           </a>
@@ -193,7 +193,7 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
             
             归档
           </a>
@@ -227,20 +227,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/05/2018-12-5/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="YM-FANG">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/favicon.ico">
     </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="fantastic">
     </span>
 
@@ -314,8 +314,12 @@
 <p>// 订阅指定的 topic 列表,并且会自动进行动态 partition 订阅<br>// 当发生以下情况时,会进行 rebalance: 1.订阅的 topic 列表改变; 2.topic 被创建或删除; 3.consumer 线程 die; 4. 加一个新的 consumer 线程<br>// 当发生 rebalance 时，会唤醒 ConsumerRebalanceListener 线程<br>public void subscribe(Collection<string> topics, ConsumerRebalanceListener listener){}<br>// 同上，但是这里没有设置 listener<br>public void subscribe(Collection<string> topics) {}<br>//note: 订阅那些满足一定规则(pattern)的 topic<br>public void subscribe(Pattern pattern, ConsumerRebalanceListener listener){}</string></string></p>
 <p>go中异常处理  defer,panic,recover<br>抛出一个panic异常，然后再defer中通过recover捕获这个异常</p>
 <p>int8  1byte<br>uint8 1byte<br>int16 2<br>uint16 2<br>int32  4<br>uint32 4<br>int64  8<br>uint64 8</p>
-<p>go中的new  func new(Type) *Type  分配一个Type类型的指针<br>     make  func  make(Type,size IntegerType)Type  返回引用  初始化一个slice/map/chan对象</p>
-<p>path/filepath  func Abs(path string) (string,error)<br>                Abs返回path代表的绝对路径<br>io<br>        func ReadAtLeast(r Reader,buf []byte,min int)(n int,err error)<br>        从r中读取至少min字节数填充进buf,函数返回写入的字节数和错误<br>        （没有读取到字节时返回EOF）(读取字节数未达到min时返回ErrUnexceptedEOF)(min的长度比buf长时，返回ErrShortBuffer )</p>
+<p>go中的new  func new(Type) *Type  分配一个Type类型的指针<br>     make  func  make(Type,size IntegerType)Type  返回引用  初始化一个slice/map/chan对象，并非指针</p>
+<p>make和new的区别  make用于内建类型（map,slice,channel）的内存分配  new用于各种类型的内存分配<br>path/filepath  func Abs(path string) (string,error)<br>                Abs返回path代表的绝对路径<br>io<br>        func ReadAtLeast(r Reader,buf []byte,min int)(n int,err error)<br>        从r中读取至少min字节数填充进buf,函数返回写入的字节数和错误<br>        （没有读取到字节时返回EOF）(读取字节数未达到min时返回ErrUnexceptedEOF)(min的长度比buf长时，返回ErrShortBuffer )</p>
+<p>go中可以返回局部变量的地址,但是C不可以  C里面会造成内存访问越界，因为局部变量的地址可能进行了重新分配 </p>
+<p>===========go中的打印================<br>fmt.Printf，fmt.Fprintf，fmt.Sprintf  返回一个字符串<br>fmt.Printf(“Hello %d\n”, 23)  //这个不会自己换行<br>fmt.Fprint(os.Stdout, “Hello “, 23, “\n”)<br>fmt.Println(“Hello”, 23)<br>fmt.Println(fmt.Sprint(“Hello “, 23))<br>打印结构体时  %v   %+v  会为结构体的每个字段加上字段名   %#v go的语法打印方式<br>type T struct {<br>    a int<br>    b float64<br>    c string<br>}<br>t := &amp;T{ 7, -2.35, “abc\tdef” }<br>fmt.Printf(“%v\n”, t)<br>fmt.Printf(“%+v\n”, t)<br>fmt.Printf(“%#v\n”, t)</p>
+<h2 id="fmt-Printf-“-v-n”-timeZone"><a href="#fmt-Printf-“-v-n”-timeZone" class="headerlink" title="fmt.Printf(“%#v\n”, timeZone)"></a>fmt.Printf(“%#v\n”, timeZone)</h2><p>&amp;{7 -2.35 abc   def}<br>&amp;{a:7 b:-2.35 c:abc     def}<br>&amp;main.T{a:7, b:-2.35, c:”abc\tdef”}</p>
+<h2 id="map-string-int-“CST”-21600-“PST”-28800-“EST”-18000-“UTC”-0-“MST”-25200"><a href="#map-string-int-“CST”-21600-“PST”-28800-“EST”-18000-“UTC”-0-“MST”-25200" class="headerlink" title="map[string] int{“CST”:-21600, “PST”:-28800, “EST”:-18000, “UTC”:0, “MST”:-25200}"></a>map[string] int{“CST”:-21600, “PST”:-28800, “EST”:-18000, “UTC”:0, “MST”:-25200}</h2><p>%T 打印值的类型  fmt.Printf(“%T\n”,T)</p>
 
       
     </div>
@@ -407,14 +411,21 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image"
-                src="/images/favicon.ico"
-                alt="YM-FANG" />
+              <img class="site-author-image" itemprop="image" src="/images/favicon.ico" alt="YM-FANG">
             
               <p class="site-author-name" itemprop="name">YM-FANG</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -427,7 +438,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -455,6 +466,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#fmt-Printf-“-v-n”-timeZone"><span class="nav-number">1.</span> <span class="nav-text">fmt.Printf(“%#v\n”, timeZone)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map-string-int-“CST”-21600-“PST”-28800-“EST”-18000-“UTC”-0-“MST”-25200"><span class="nav-number">2.</span> <span class="nav-text">map[string] int{“CST”:-21600, “PST”:-28800, “EST”:-18000, “UTC”:0, “MST”:-25200}</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -476,7 +503,7 @@
 <span id="busuanzi_container_site_uv">
   本站访客数<span id="busuanzi_value_site_uv"></span>人次
 </span>
-<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
