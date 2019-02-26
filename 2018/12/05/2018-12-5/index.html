@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="fantastic">
 <meta property="og:description" content="###kafkaBroker  集群包含了一个或者多个服务器Topic   每条发布到kafka几群的消息都有一个类别，这个类别称为TopicPartation  物理概念，每个topic包含一个或者多个PartationProducer   负责发布消息到kafka broker consumer 订阅模式 subscribe()  assign()         commit实现  comm">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-23T07:47:54.093Z">
+<meta property="og:updated_time" content="2019-02-15T04:16:10.326Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="go  总结--">
 <meta name="twitter:description" content="###kafkaBroker  集群包含了一个或者多个服务器Topic   每条发布到kafka几群的消息都有一个类别，这个类别称为TopicPartation  物理概念，每个topic包含一个或者多个PartationProducer   负责发布消息到kafka broker consumer 订阅模式 subscribe()  assign()         commit实现  comm">
@@ -320,6 +320,18 @@
 <p>===========go中的打印================<br>fmt.Printf，fmt.Fprintf，fmt.Sprintf  返回一个字符串<br>fmt.Printf(“Hello %d\n”, 23)  //这个不会自己换行<br>fmt.Fprint(os.Stdout, “Hello “, 23, “\n”)<br>fmt.Println(“Hello”, 23)<br>fmt.Println(fmt.Sprint(“Hello “, 23))<br>打印结构体时  %v   %+v  会为结构体的每个字段加上字段名   %#v go的语法打印方式<br>type T struct {<br>    a int<br>    b float64<br>    c string<br>}<br>t := &amp;T{ 7, -2.35, “abc\tdef” }<br>fmt.Printf(“%v\n”, t)<br>fmt.Printf(“%+v\n”, t)<br>fmt.Printf(“%#v\n”, t)</p>
 <h2 id="fmt-Printf-“-v-n”-timeZone"><a href="#fmt-Printf-“-v-n”-timeZone" class="headerlink" title="fmt.Printf(“%#v\n”, timeZone)"></a>fmt.Printf(“%#v\n”, timeZone)</h2><p>&amp;{7 -2.35 abc   def}<br>&amp;{a:7 b:-2.35 c:abc     def}<br>&amp;main.T{a:7, b:-2.35, c:”abc\tdef”}</p>
 <h2 id="map-string-int-“CST”-21600-“PST”-28800-“EST”-18000-“UTC”-0-“MST”-25200"><a href="#map-string-int-“CST”-21600-“PST”-28800-“EST”-18000-“UTC”-0-“MST”-25200" class="headerlink" title="map[string] int{“CST”:-21600, “PST”:-28800, “EST”:-18000, “UTC”:0, “MST”:-25200}"></a>map[string] int{“CST”:-21600, “PST”:-28800, “EST”:-18000, “UTC”:0, “MST”:-25200}</h2><p>%T 打印值的类型  fmt.Printf(“%T\n”,T)</p>
+<p>2019/2/15———   一个傻子的学习</p>
+<pre><code>1 package main
+2 
+3 import (
+4     &quot;fmt&quot;
+5     &quot;reflect&quot;
+6 )
+7 
+8 var x = 3
+9 
+</code></pre><p>   10 func main() {<br>   11     fmt.Println(“x type:”, reflect.TypeOf(x), x, &amp;x)<br>   12     x = 4   //这个是局部变量覆盖全局变量<br>   13     fmt.Println(“x type:”, reflect.TypeOf(x), x, &amp;x)<br>   14     x := 5.55  //这个是重新定义<br>   15     fmt.Println(“x type:”, reflect.TypeOf(x), x, &amp;x)<br>   16 }<br>输出结果如下</p>
+<p>x type: int 3 0x4f6018<br>x type: int 4 0x4f6018<br>x type: float64 5.55 0xc42000e288</p>
 
       
     </div>

@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="今日学习 group by 和 order by 一起使用的时候，order by 应该在group by 的后面，不能调换顺序，否则报错 下面这样子 group by 按照user去重，order by 按照sort降序排序 select user,sort from table_Name where room = xxx group by user order by sort desc">
+<meta name="description" content="今日学习 group by 和 order by 一起使用的时候，order by 应该在group by 的后面，不能调换顺序，否则报错 下面这样子 group by 按照user去重，order by 按照sort降序排序 select user,sort from table_Name where room = xxx group by user order by sort desc 19/">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sql总结，持续更新">
 <meta property="og:url" content="http://yoursite.com/2018/12/03/2018-12-3/index.html">
 <meta property="og:site_name" content="fantastic">
-<meta property="og:description" content="今日学习 group by 和 order by 一起使用的时候，order by 应该在group by 的后面，不能调换顺序，否则报错 下面这样子 group by 按照user去重，order by 按照sort降序排序 select user,sort from table_Name where room = xxx group by user order by sort desc">
+<meta property="og:description" content="今日学习 group by 和 order by 一起使用的时候，order by 应该在group by 的后面，不能调换顺序，否则报错 下面这样子 group by 按照user去重，order by 按照sort降序排序 select user,sort from table_Name where room = xxx group by user order by sort desc 19/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-03T02:36:38.595Z">
+<meta property="og:updated_time" content="2019-02-26T07:27:27.144Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql总结，持续更新">
-<meta name="twitter:description" content="今日学习 group by 和 order by 一起使用的时候，order by 应该在group by 的后面，不能调换顺序，否则报错 下面这样子 group by 按照user去重，order by 按照sort降序排序 select user,sort from table_Name where room = xxx group by user order by sort desc">
+<meta name="twitter:description" content="今日学习 group by 和 order by 一起使用的时候，order by 应该在group by 的后面，不能调换顺序，否则报错 下面这样子 group by 按照user去重，order by 按照sort降序排序 select user,sort from table_Name where room = xxx group by user order by sort desc 19/">
 
 
 
@@ -313,7 +313,8 @@
 <p>group by 和 order by 一起使用的时候，order by 应该在group by 的后面，不能调换顺序，否则报错 下面这样子</p>
 <pre><code>group by 按照user去重，order by 按照sort降序排序
 select user,sort from table_Name where room = xxx group by user order by sort desc
-</code></pre>
+</code></pre><p>19/2/21<br>伤心  哎  想骂人不知道骂谁<br>mysqldump<br>不能导出符合特定条件的数据只能全部倒出来<br>mysql -h xxxxxxxxx -P3306 -u xxxxxxx -pxxxxxxxxx -e “select name,qid from xxxxx.hostinfo where sex=2”&gt;b.sql<br>这个语句可以选择性的将自己想要的数据导出来<br>19/2/26<br>导数据用了limit语句，刚开始跑着还好，但是到后面发现语句特别慢，一条语句得执行十几秒才返回，然后网上查limit的偏移太大<br>“select id,rid,idcard from userauth where idcard!=’’ &amp;&amp;  limit 1000000,10000”;<br>优化策略：子查询<br>“select id,rid,idcard from userauth where id&gt; (select id from userauth where idcard!=’’ &amp;&amp; status=1 limit 1000000,1) limit 10000”</p>
+
       
     </div>
     
